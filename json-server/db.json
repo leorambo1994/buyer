@@ -1,0 +1,34 @@
+{
+    "banners" : [
+        {
+            "_id" : "1",
+            "name" : "1 product",
+            "imageFeatruedUrl": "http://qjolkfg1d.hn-bkt.clouddn.com/1.jpg"
+        },
+        {
+            "_id" : "2",
+            "name" : "2 product",
+            "imageFeatruedUrl": "http://qjolkfg1d.hn-bkt.clouddn.com/2.jpg"
+        },
+        {
+            "_id" : "3",
+            "name" : "3 product",
+            "imageFeatruedUrl": "http://qjolkfg1d.hn-bkt.clouddn.com/3.jpg"
+        },
+        {
+            "_id" : "4",
+            "name" : "4 product",
+            "imageFeatruedUrl": "http://qjolkfg1d.hn-bkt.clouddn.com/4.jpg"
+        },
+        {
+            "_id" : "5",
+            "name" : "5 product",
+            "imageFeatruedUrl": "http://qjolkfg1d.hn-bkt.clouddn.com/5.jpg"
+        },
+        {
+            "_id" : "6",
+            "name" : "6 product",
+            "imageFeatruedUrl": "http://qjolkfg1d.hn-bkt.clouddn.com/6.jpg"
+        }
+    ]
+}
