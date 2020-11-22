@@ -1,0 +1,17 @@
+<div *ngIf="banners" class="widget widget-featured-banners">
+  <h3 class="widget-title">{{ widgetTitle }}</h3>
+
+  <div *ngFor="let banner of banners" class="entry">
+    <div class="entry-thumb">
+      <a routerLink="/banners/{{ banner.name }}">
+        <img src="{{ banner.imageFeaturedUrl }}" alt="{{ banner.name }}">
+      </a>
+    </div>
+    <div class="entry-content">
+      <h4 class="entry-title">
+        <a routerLink="/banners/{{ banner.name }}">{{ banner.name }}</a>
+      </h4>
+    </div>
+  </div>
+
+</div>

@@ -37,28 +37,6 @@ export class MainSliderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.currentSlide = 0;
     this.imagesLoaded = [];
-
-    // 构建轮播数据
-
-    // this.items = [
-    //   {
-    //     _id: "1",
-    //     name: "1 product",
-    //     imageFeatruedUrl: "http://qjolkfg1d.hn-bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201112194009.jpg?e=1605185169&token=jyobYzX9elcdfpXh8w-dzFXIw0iGxFYXYnIuZn5b:4Wbp68MwFuhBm0mvTsAf9btUEDQ="
-    //   },
-    //   {
-    //     _id: "2",
-    //     name: "2 product",
-    //     imageFeatruedUrl: "http://qjolkfg1d.hn-bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201112194049.jpg?e=1605185169&token=jyobYzX9elcdfpXh8w-dzFXIw0iGxFYXYnIuZn5b:V_F2eKu0pulqoTQ8VO6bb4GaZts="
-    //   },
-    //   {
-    //     _id: "3",
-    //     name: "3 product",
-    //     imageFeatruedUrl: "http://qjolkfg1d.hn-bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201112194055.jpg?e=1605185169&token=jyobYzX9elcdfpXh8w-dzFXIw0iGxFYXYnIuZn5b:n8B1lytRK9Bgt-4l2GMYIDhAGr4="
-    //   }
-    // ];
-    // console.log('local banner data:' , this.items);
-    
   }
 
   public prev() {

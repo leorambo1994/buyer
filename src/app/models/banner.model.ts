@@ -1,20 +1,8 @@
-export class Product {
-
-  imgUrl: string;
-  name: string;
-  price: number;
-
-  public date: string = new Date().toISOString().split('T')[0];
-  public description: string = '';
-  public priceNormal: number = 500;
-  public reduction: number = 15;
-  public imageURLs: string[] = [];
-  public imageRefs: string[] = [];
-  public categories: {} = {};
-  public ratings: {} = {};
-  public currentRating: number = 0;
-  public sale: boolean = false;
-
+export class Banner {
+  
+  name : String;
+  imageFeaturedUrl : String;
+  
 }
 
 

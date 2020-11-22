@@ -10,6 +10,7 @@ export class User {
   public roles?: Roles;
   public firstName?: string;
   public lastName?: string;
+  public username?: string;
   public password?: string;
   public orders?: object;
   public confirmPassword?: string;
@@ -19,6 +20,7 @@ export class User {
     this.email = authData.email;
     this.firstName = authData.firstName ? authData.firstName : '';
     this.lastName = authData.lastName ? authData.lastName : '';
+    this.username = authData.username ? authData.username : '';
     this.roles = {
       admin: false
     };

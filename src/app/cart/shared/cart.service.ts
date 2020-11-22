@@ -19,14 +19,14 @@ export class CartService {
 
   // Get Product ids out of CartItem[] in a new array
   private getItemIds() {
-    return this.getItems().map(cartItem => cartItem.product.id);
+    return this.getItems().map(cartItem => cartItem.product.name);
   }
 
   public addItem(item: CartItem) {
     // If item is already in cart, add to the amount, otherwise push item into cart
-    if (this.getItemIds().includes(item.product.id)) {
+    if (this.getItemIds().includes(item.product.name)) {
       this.cartItems.forEach(function (cartItem) {
-        if (cartItem.product.id === item.product.id) {
+        if (cartItem.product.name === item.product.name) {
           cartItem.amount += item.amount;
         }
       });
@@ -53,7 +53,7 @@ export class CartService {
 
   public updateItemAmount(item: CartItem, newAmount: number) {
     this.cartItems.forEach((cartItem) => {
-      if (cartItem.product.id === item.product.id) {
+      if (cartItem.product.name === item.product.name) {
         cartItem.amount = newAmount;
       }
     });

@@ -19,7 +19,7 @@ import { User } from '../../models/user.model';
   styleUrls: ['./products-list.component.scss']
 })
 export class ProductsListComponent implements OnInit, OnDestroy {
-  unsubscribe$ = new Subject();
+  unsubscribe$ = new Subject()
   products: Product[];
   productsPaged: Product[];
   pager: any = {};
@@ -90,7 +90,7 @@ export class ProductsListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+    // this.unsubscribe$.next();
+    // this.unsubscribe$.complete();
   }
 }

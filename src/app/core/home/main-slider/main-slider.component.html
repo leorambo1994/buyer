@@ -9,14 +9,16 @@
             <div class="from-bottom">
               <div class="h2 text-body text-normal mb-2 pt-1">{{ item.name }}</div>
               <div class="h2 text-body text-normal mb-4 pb-1">starting at
-                <span class="text-bold"><app-price [product]="item"></app-price></span>
+                <span class="text-bold">
+                  <!-- <app-price [banner]="item"></app-price> -->
+                </span>
               </div>
             </div>
-            <a class="btn btn-primary scale-up delay-1" routerLink="/products/{{ item.id }}">Shop now</a>
+            <a class="btn btn-primary scale-up delay-1" routerLink="/products">Shop now</a>
           </div>
           <div class="col-md-6 padding-bottom-2x mb-3">
-            <div class="image-wrapper" [ngClass]="{'loading': !imagesLoaded.includes(item.imageFeaturedurl)}">
-              <img [hidden]="!imagesLoaded.includes(item.imageFeaturedurl)" class="d-block mx-auto" src="{{ item.imageFeaturedUrl }}" alt="{{ item.name }}" (load)="onImageLoad($event)">
+            <div class="image-wrapper" [ngClass]="{'loading': !imagesLoaded.includes(item.imageFeaturedUrl)}">
+              <img [hidden]="!imagesLoaded.includes(item.imageFeaturedUrl)" class="d-block mx-auto" src="{{ item.imageFeaturedUrl }}" alt="{{ item.name }}" (load)="onImageLoad($event)">
             </div>
           </div>
         </div>
