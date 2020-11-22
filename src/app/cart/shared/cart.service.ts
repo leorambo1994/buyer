@@ -19,21 +19,21 @@ export class CartService {
 
   // Get Product ids out of CartItem[] in a new array
   private getItemIds() {
-    return this.getItems().map(cartItem => cartItem.product.name);
+    return this.getItems().map(cartItem => cartItem.product.id);
   }
 
   public addItem(item: CartItem) {
     // If item is already in cart, add to the amount, otherwise push item into cart
-    if (this.getItemIds().includes(item.product.name)) {
+    if (this.getItemIds().includes(item.product.id)) {
       this.cartItems.forEach(function (cartItem) {
-        if (cartItem.product.name === item.product.name) {
+        if (cartItem.product.id === item.product.id) {
           cartItem.amount += item.amount;
         }
       });
-      this.messageService.add('Amount in cart changed for: ' + item.product.name);
+      this.messageService.add('Amount in cart changed for: ' + item.product.id);
     } else {
       this.cartItems.push(item);
-      this.messageService.add('Added to cart: ' + item.product.name);
+      this.messageService.add('Added to cart: ' + item.product.id);
     }
     this.itemsChanged.emit(this.cartItems.slice());
   }
@@ -48,17 +48,17 @@ export class CartService {
     const indexToRemove = this.cartItems.findIndex(element => element === item);
     this.cartItems.splice(indexToRemove, 1);
     this.itemsChanged.emit(this.cartItems.slice());
-    this.messageService.add('Deleted from cart: ' + item.product.name);
+    this.messageService.add('Deleted from cart: ' + item.product.id);
   }
 
   public updateItemAmount(item: CartItem, newAmount: number) {
     this.cartItems.forEach((cartItem) => {
-      if (cartItem.product.name === item.product.name) {
+      if (cartItem.product.id === item.product.id) {
         cartItem.amount = newAmount;
       }
     });
     this.itemsChanged.emit(this.cartItems.slice());
-    this.messageService.add('Updated amount for: ' + item.product.name);
+    this.messageService.add('Updated amount for: ' + item.product.id);
   }
 
   public clearCart() {

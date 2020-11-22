@@ -82,11 +82,9 @@ export class RegisterLoginComponent implements OnInit {
     if (this.registerForm.valid) {
 
       const obj = {
-
         username: this.registerForm.controls.username.value,
         password: this.registerForm.controls.password.value,
         email: this.registerForm.controls.email.value,
-
       };
 
       this.authService.register(obj).subscribe(data => {
@@ -94,18 +92,19 @@ export class RegisterLoginComponent implements OnInit {
         this.myData = data;
         if ( this.myData.code == '0' ) {
 
-          this.messageService.add('Account created successfully. Please login with your new credentials!');
-          this.loginForm.setValue({ username: this.registerForm.value.username, password: '' });
-          this.initRegisterForm();
+          this.loginForm.setValue({ 
+            username: this.registerForm.value.username, 
+            password: this.registerForm.value.password 
+          });
+          this.initLoginForm();
           // this.alertService.success('注册成功！正在跳转...');
+          this.messageService.add('Account created successfully. Please login with your new credentials!');
+          this.router.navigate(['/home']);
         }
         else {
           this.alertService.error(this.myData.msg);
         }
       });
-
-
-
     }
   }
 

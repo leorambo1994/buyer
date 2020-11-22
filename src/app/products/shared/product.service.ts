@@ -22,6 +22,32 @@ export class ProductService {
     return this.http.get(this.baseUrl + '/' + id);
   }
    
+
+  //     public addProduct(data: { product: Product; files: FileList }) {
+  //   const dbOperation = this.uploadService
+  //     .startUpload(data)
+  //     .then((task) => {
+  //       // data.product.imgUrl.push(task.downloadURL);
+  //       // data.product.imageRefs.push(task.ref.fullPath);
+
+  //       return this.http.get
+  //         .list('products')
+  //         .set(data.product.name.toString(), data.product);
+  //     }, (error) => error)
+  //     .then((response) => {
+  //       this.log(`Added Product ${data.product.name}`);
+  //       return data.product;
+  //     })
+  //     .catch((error) => {
+  //       this.messageService.addError(
+  //         `Add Failed, Product ${data.product.name}`
+  //       );
+  //       this.handleError(error);
+  //       return error;
+  //     });
+  //   return fromPromise(dbOperation);
+  // }
+  
   // 以上所有的返回都是一个对象，Observable
 }
 

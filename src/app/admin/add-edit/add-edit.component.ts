@@ -54,7 +54,7 @@ export class AddEditComponent implements OnInit, OnDestroy {
       ),
       id: new FormControl(
         {
-          value: this.product && this.product.id,
+          value: this.product && this.product.name,
           disabled: true
         },
         [Validators.required, Validators.min(0)]
@@ -109,7 +109,7 @@ export class AddEditComponent implements OnInit, OnDestroy {
 
   private getProduct(id): void {
     this.productSubscription = this.productService
-      .getProduct(id)
+      .getProductById(id)
       .subscribe((product) => {
         if (product) {
           product.categories = this.categoriesFromObjectToString(

@@ -6,8 +6,8 @@ export class Product {
 
   public date: string = new Date().toISOString().split('T')[0];
   public description: string = '';
-  public priceNormal: number = 500;
-  public reduction: number = 15;
+  public priceNormal: number = 0;
+  public reduction: number = 0;
   public imageURLs: string[] = [];
   public imageRefs: string[] = [];
   public categories: {} = {};
