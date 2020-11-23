@@ -41,19 +41,19 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   public increaseAmount(item: CartItem) {
-    this.cartService.updateItemAmount(item, item.amount + 1);
+    // this.cartService.updateItemAmount(item, item.amount + 1);
   }
 
   public decreaseAmount(item: CartItem) {
     const newAmount = item.amount === 1 ? 1 : item.amount - 1;
-    this.cartService.updateItemAmount(item, newAmount);
+    // this.cartService.updateItemAmount(item, newAmount);
   }
 
   public checkAmount(item: CartItem) {
-    this.cartService.updateItemAmount(
-      item,
-      item.amount < 1 || !item.amount || isNaN(item.amount) ? 1 : item.amount
-    );
+    // this.cartService.updateItemAmount(
+    //   item,
+    //   item.amount < 1 || !item.amount || isNaN(item.amount) ? 1 : item.amount
+    // );
   }
 
   ngOnDestroy() {

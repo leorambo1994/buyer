@@ -1,1 +1,6 @@
 [1121/182335.668:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1123/214541.976:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1123/215541.044:ERROR:process_info.cc(359)] UncheckedAllocate
+[1123/215541.044:ERROR:process_info.cc(359)] UncheckedAllocate
+[1123/215546.261:ERROR:process_info.cc(359)] UncheckedAllocate
+[1123/215546.270:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\leora\AppData\Local\Google\Chrome\User Data\Crashpad\reports\21eea703-1ce8-4982-b11f-5855b73aa98d.dmp: 另一个程序正在使用此文件，进程无法访问。 (0x20)

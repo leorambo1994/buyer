@@ -31,15 +31,15 @@ export class SearchComponent implements OnInit {
         debounceTime(400),
         distinctUntilChanged(),
         filter((term) => term.length > 0),
-        switchMap((term) => this.search(term))
+        // switchMap((term) => this.search(term))
       )
       .subscribe((results) => {
-        this.products = results;
+        // this.products = results;
       });
   }
 
   public search(term: string) {
-    return this.productService.findProducts(term);
+    // return this.productService.findProducts(term);
   }
 
   public onSearchInput(event) {

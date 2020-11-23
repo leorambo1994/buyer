@@ -45,7 +45,7 @@ export class ProductRatingService {
   }
 
   public rateProduct(product: Product, rating: number) {
-    const url = `${this.productsUrl}/${product.id}`;
+    const url = `${this.productsUrl}/${product.name}`;
     const updates = this.constructRating(product, rating);
 
     return fromPromise(

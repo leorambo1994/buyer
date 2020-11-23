@@ -73,7 +73,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     const id = +this.route.snapshot.paramMap.get('id');
 
     this.productService
-      .getProduct(id)
+      .getProductById(id)
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((product: Product) => {
         if (product) {
